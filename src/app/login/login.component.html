@@ -29,15 +29,19 @@
 
   <div class="buttonEnvoie">
     <button
+      mat-raised-button
+      class="connexion"
       type="submit"
       (click)="connexion()"
-      class="btn btn-primary submit connexion"
     >
       Se connecter
     </button>
+
     <p class="inscri">
       Pas encore de compte ? <a routerLink="../home">Cliquez ici!</a>
     </p>
+    <mat-spinner color="warn" *ngIf="loading" [diameter]="50"></mat-spinner>
   </div>
+
   <!-- </form> -->
 </div>
