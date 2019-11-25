@@ -1,27 +1,43 @@
 <div class="container-fluid">
   <h1>Connexion</h1>
-  <form>
-    <div class="col-md-6 mb-3">
-      <label>Votre E-mail : </label>
+  <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
+  <!-- <form> -->
+  <div class="col-md-6 mb-3 center">
+    <!-- INPUT AVEC MATERIAL ANGULAR IO -->
+    <mat-form-field class="example-full-width">
       <input
-        type="email"
-        placeholder="email.exemple@gmail.com"
+        matInput
+        type="text"
+        placeholder="email"
         class="form-control"
+        [(ngModel)]="login"
       />
-    </div>
+    </mat-form-field>
+  </div>
 
-    <div class="col-md-6 mb-3">
-      <label>Votre mot de passe : </label>
-      <input type="password" class="form-control " />
-    </div>
+  <div class="col-md-6 mb-3 center">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        type="password"
+        class="form-control"
+        placeholder="mdp"
+        [(ngModel)]="mdp"
+      />
+    </mat-form-field>
+  </div>
 
-    <div class="buttonEnvoie">
-      <button type="submit" class="btn btn-primary submit connexion">
-        Se connecter
-      </button>
-      <p class="inscri">
-        Pas encore de compte ? <a routerLink="login">Cliquez ici!</a>
-      </p>
-    </div>
-  </form>
+  <div class="buttonEnvoie">
+    <button
+      type="submit"
+      (click)="connexion()"
+      class="btn btn-primary submit connexion"
+    >
+      Se connecter
+    </button>
+    <p class="inscri">
+      Pas encore de compte ? <a routerLink="../home">Cliquez ici!</a>
+    </p>
+  </div>
+  <!-- </form> -->
 </div>
