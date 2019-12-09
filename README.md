@@ -2,6 +2,8 @@
 
 # Tp1
 
+![Build Status](https://github.com/stacy1930/angular_perales_b3_tp/workflows/Angular%20CI/badge.svg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
 ## Development server
