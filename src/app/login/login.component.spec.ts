@@ -1,13 +1,12 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { LoginComponent } from "./login.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
-import {
-  MatSpinner,
-  MatProgressSpinnerModule
-} from "@angular/material/progress-spinner";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { HttpClientModule } from "@angular/common/http";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 describe("LoginComponent", () => {
   let component: LoginComponent;
@@ -18,9 +17,11 @@ describe("LoginComponent", () => {
       imports: [
         FormsModule,
         MatInputModule,
-        MatSpinner,
+        MatSnackBarModule,
         MatProgressSpinnerModule,
-        HttpClientModule
+        HttpClientModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule
       ],
       declarations: [LoginComponent]
     }).compileComponents();
@@ -35,8 +36,8 @@ describe("LoginComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
-
-  it("Connexion", () => {
-    expect(component).toBeTruthy();
+  it("good init", () => {
+    expect(component.logged).toBeFalsy();
+    expect(component.loading).toBeFalsy();
   });
 });

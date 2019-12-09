@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = "tp1";
+  title = "Tp1";
   stylevar = "pointer";
   boolPointer = false;
   osef() {}
