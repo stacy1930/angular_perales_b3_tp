@@ -1,16 +1,29 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { LoginComponent } from './login.component';
+import { LoginComponent } from "./login.component";
+import { FormsModule } from "@angular/forms";
+import { MatInputModule } from "@angular/material/input";
+import {
+  MatSpinner,
+  MatProgressSpinnerModule
+} from "@angular/material/progress-spinner";
+import { HttpClientModule } from "@angular/common/http";
 
-describe('LoginComponent', () => {
+describe("LoginComponent", () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      imports: [
+        FormsModule,
+        MatInputModule,
+        MatSpinner,
+        MatProgressSpinnerModule,
+        HttpClientModule
+      ],
+      declarations: [LoginComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +32,11 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
+    expect(component).toBeTruthy();
+  });
+
+  it("Connexion", () => {
     expect(component).toBeTruthy();
   });
 });
