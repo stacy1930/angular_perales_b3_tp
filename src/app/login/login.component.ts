@@ -11,11 +11,12 @@ import IUser from "../models/IUser";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  login: "Bret";
   mdp: string;
   loginForm: FormGroup;
   loading = false;
   logged = false;
+  username = "Bret";
+  error = false;
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
@@ -25,17 +26,20 @@ export class LoginComponent implements OnInit {
     this.loading = true;
 
     this.http
-      .get("https://jsonplaceholder.typicode.com/users?username=" + this.login) // Retourne un observable
+      .get(
+        "https://jsonplaceholder.typicode.com/users?username=" + this.username
+      ) // Retourne un observable
       .subscribe(
         (value: IUser[]) => {
-          console.log("get: ", this.login, value.length);
-          console.log(value[0].company.name);
+          console.log("get: ", this.username, value.length);
+          //       console.log(value[0].company.name);
           if (value.length === 1) {
             this.logged = true;
             this.snackBar.open("Vous êtes connecté", null, {
               duration: 2000
             });
           } else {
+            this.error = true;
             this.loading = false;
             this.snackBar.open("Connexion échoué", null, {
               duration: 2000
