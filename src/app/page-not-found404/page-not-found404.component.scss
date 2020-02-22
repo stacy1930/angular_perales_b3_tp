@@ -6,21 +6,38 @@
   #main {
     display: table;
     width: 100%;
-    min-height: 71.2vh;
+    min-height: 86vh;
     text-align: center;
     // background-color: rgba(95, 158, 160, 0.4);
     background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 1) 50%,
-      rgba(252, 176, 69, 1) 100%
+    background-image: linear-gradient(
+      to right top,
+      #47c9af,
+      #6dd7e0,
+      #ace1fa,
+      #e1edff,
+      #ffffff
     );
   }
 
   .fof {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  .retourAccueil {
+    background-color: #47c9af;
+    border: 1px solid #47c9af;
+    border-radius: 10px;
+  }
+
+  .accueil {
+    margin: 2%;
+  }
+  .aRetourAccueil {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
   }
 
   .fof h1 {

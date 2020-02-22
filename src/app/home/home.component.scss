@@ -1,0 +1,48 @@
+.logo {
+  margin: auto;
+}
+.divLogo {
+  text-align: center;
+  margin-top: 4%;
+}
+
+.boutonConnexion {
+  background-color: #47c9af;
+  border: 1px solid #47c9af;
+  border-radius: 10px;
+}
+
+.aConnexion {
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+}
+
+.aConnexion:hover {
+  color: black;
+}
+.boutonConnexion:hover {
+  background-color: rgba(71, 201, 175, 0.4);
+  border: 1px solid rgba(71, 201, 175, 0.4);
+  border-radius: 10px;
+}
+
+.connexion {
+  margin: 1%;
+}
+
+.erreur404 {
+  margin: 1%;
+}
+
+.boutonErreur {
+  background-color: #ff94c6;
+  border: 1px solid #ff94c6;
+  border-radius: 10px;
+}
+
+.boutonErreur:hover {
+  background-color: rgba(255, 148, 198, 0.4);
+  border: 1px solid rgba(255, 148, 198, 0.4);
+  border-radius: 10px;
+}
