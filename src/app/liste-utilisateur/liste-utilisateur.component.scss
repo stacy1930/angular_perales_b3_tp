@@ -1,0 +1,21 @@
+// .liste {
+//   margin-top: 1%;
+//   margin-bottom: 1%;
+// }
+
+.utilisateurList {
+  border: 2px solid #48c9b0;
+  margin: 4%;
+  border-radius: 10px;
+  box-shadow: 8px 8px 0px #aaa;
+}
+
+h1 {
+  text-align: center;
+}
+
+.liste:nth-child(odd) {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background: rgba(197, 237, 222, 0.8);
+}

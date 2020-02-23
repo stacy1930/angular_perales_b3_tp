@@ -1,0 +1,10 @@
+<mat-list class="utilisateurList">
+  <h1>Liste des utilisateurs</h1>
+  <mat-list-item *ngFor="let utilisateur of utilisateurs" class="liste">
+    <h4 mat-line class="toto">
+      <strong>{{ utilisateur.name }}</strong>
+    </h4>
+    <p mat-line>Username : {{ utilisateur.username }}</p>
+    <p mat-line>E-mail : {{ utilisateur.email }}</p>
+  </mat-list-item>
+</mat-list>
